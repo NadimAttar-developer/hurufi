@@ -1,0 +1,162 @@
+.clue {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-xl);
+  background: var(--nebula-500);
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slots {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.slot {
+  width: 120px;
+  height: 132px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 72px;
+  line-height: 1;
+}
+
+.empty {
+  border: 3px dashed var(--space-400);
+  align-items: flex-end;
+  padding-bottom: 14px;
+}
+
+.nextSlot {
+  border-color: var(--star-500);
+}
+
+.line {
+  width: 40px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--space-600);
+}
+
+.filled,
+.bad {
+  background: var(--surface-raised);
+  border: 3px solid var(--space-400);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.bad {
+  border-style: dashed;
+  border-color: var(--alert);
+}
+
+.right {
+  background: var(--meteor-500);
+  border: 0;
+  color: var(--space-900);
+  box-shadow: 0 0 20px rgba(75, 227, 193, 0.6);
+}
+
+.joined {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--surface-raised);
+  border-radius: 24px;
+  padding: 10px 28px;
+}
+
+.tiles {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.tile {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  border: 0;
+  background: var(--star-500);
+  color: var(--space-900);
+  font-size: 52px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 7px 0 var(--star-700);
+}
+
+.tile:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 4px 0 var(--star-700);
+}
+
+.tile:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.usedTile {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  border: 2px dashed var(--space-600);
+}
+
+.howto {
+  margin: 0;
+  padding-inline-start: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+}
+
+@media (max-width: 700px) {
+  .picture {
+    width: 104px;
+    height: 104px;
+  }
+  .slots {
+    gap: 12px;
+  }
+  .slot {
+    width: 96px;
+    height: 106px;
+    font-size: 58px;
+  }
+  .tiles {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .tile,
+  .usedTile {
+    width: 64px;
+    height: 68px;
+    font-size: 38px;
+    border-radius: 18px;
+  }
+  .howto {
+    display: none;
+  }
+}

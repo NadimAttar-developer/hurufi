@@ -1,0 +1,96 @@
+.head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tools {
+  display: flex;
+  gap: 10px;
+}
+
+.board {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 4 / 3;
+  touch-action: none;
+  user-select: none;
+  cursor: crosshair;
+  display: block;
+}
+
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.stepDot {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px dashed var(--space-400);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.stepNow {
+  border: 0;
+  background: var(--rocket-500);
+  color: var(--space-900);
+}
+
+.stepDone {
+  border: 0;
+  background: var(--meteor-500);
+  color: var(--space-900);
+}
+
+@media (max-width: 700px) {
+  .steps {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .stepItem {
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .stepDot {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

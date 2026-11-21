@@ -1,0 +1,45 @@
+.planet {
+  width: var(--size);
+  height: var(--size);
+  flex-shrink: 0;
+  border-radius: var(--radius-round);
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--size) * 0.47);
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.planet:hover {
+  transform: scale(1.05);
+}
+
+.done {
+  background: var(--meteor-500);
+  color: var(--space-900);
+  box-shadow: 0 0 14px rgba(75, 227, 193, 0.55);
+}
+
+.current {
+  background: var(--rocket-500);
+  color: var(--space-900);
+  box-shadow: 0 0 0 7px var(--rocket-300);
+}
+
+.locked {
+  background: var(--space-800);
+  color: var(--space-200);
+  border: 3px dashed var(--space-400);
+}
+
+.special {
+  border-color: var(--star-500);
+}
+
+.selected {
+  box-shadow: 0 0 0 5px var(--space-800), 0 0 0 9px var(--star-500);
+}

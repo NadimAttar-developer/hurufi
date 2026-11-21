@@ -1,0 +1,255 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  border-bottom: 1px solid var(--border);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.title {
+  flex: 1 1 180px;
+  font-size: 34px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 300px;
+  max-width: 440px;
+}
+
+.progressText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.track {
+  height: 12px;
+  border-radius: 6px;
+  background: var(--surface-raised);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 6px;
+  background: var(--meteor-500);
+  transition: width 0.4s ease;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+.board {
+  flex: 999 1 800px;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 12px 0;
+  border-radius: var(--radius-xl);
+}
+
+.canvas {
+  position: relative;
+  margin-inline: auto;
+}
+
+.paths {
+  position: absolute;
+  inset: 0;
+}
+
+.station {
+  position: absolute;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.here {
+  position: absolute;
+  top: -32px;
+  padding: 1px 10px;
+  border-radius: var(--radius-round);
+  background: var(--star-500);
+  color: var(--space-900);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-top: -4px;
+}
+
+.panel {
+  flex: 1 1 300px;
+  min-width: 0;
+  background: var(--surface-raised);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: sticky;
+  top: 16px;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.panelLetter {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.p_done { background: var(--meteor-500); color: var(--space-900); }
+.p_current { background: var(--rocket-500); color: var(--space-900); }
+.p_locked { background: var(--surface); color: var(--text-muted); border: 3px dashed var(--space-400); }
+.p_special { border-color: var(--star-500); }
+
+.panelTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.panelTitle h2 {
+  font-size: 28px;
+}
+
+.chip_done { background: var(--meteor-500); color: var(--space-900); }
+.chip_current { background: var(--star-500); color: var(--space-900); }
+.chip_locked { background: var(--space-200); color: var(--space-900); }
+
+.info {
+  font-size: 17px;
+  color: var(--text-soft);
+}
+
+.acts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.act {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 12px;
+  border-radius: 14px;
+  background: var(--surface);
+  font-weight: 700;
+}
+
+.actDone {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--meteor-500);
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actTodo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px dashed var(--space-400);
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 26px;
+  }
+  .progress {
+    flex-basis: 100%;
+    max-width: none;
+  }
+  .body {
+    padding-top: 12px;
+    padding-bottom: 0;
+    gap: 0;
+  }
+  .board {
+    overflow-x: visible;
+    padding-bottom: 24px;
+    border: 0;
+    background: transparent;
+  }
+  .panel {
+    position: sticky;
+    bottom: 0;
+    top: auto;
+    flex-basis: 100%;
+    border-radius: 24px 24px 0 0;
+    padding: 16px 16px max(20px, env(safe-area-inset-bottom, 0px));
+    gap: 12px;
+    box-shadow: var(--lift);
+    margin-inline: calc(-1 * var(--gutter));
+  }
+  .panelLetter {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+  .panelTitle h2 {
+    font-size: 22px;
+  }
+  .info {
+    font-size: 15px;
+  }
+  .acts {
+    display: none;
+  }
+}

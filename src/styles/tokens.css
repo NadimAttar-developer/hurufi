@@ -1,0 +1,105 @@
+/*
+  حروفي — كوكب الضاد
+  Design tokens copied from the "حروفي — كوكب الضاد" design system.
+  Night (ليل الفضاء) is the default; add class "theme-day" for parents' pages.
+*/
+:root {
+  /* Colour scales */
+  --space-950: #0b0c24;
+  --space-900: #14163a;
+  --space-800: #1c1f4a;
+  --space-700: #22265c;
+  --space-600: #343884;
+  --space-400: #6d71c9;
+  --space-200: #b9b5e8;
+  --space-100: #d9d6f5;
+  --space-50: #f5f3ff;
+
+  --rocket-100: #fff0e0;
+  --rocket-300: #ffc58c;
+  --rocket-500: #ff9f43;
+  --rocket-700: #d9741a;
+  --rocket-900: #9a4a08;
+
+  --meteor-100: #dffbf4;
+  --meteor-300: #95f0db;
+  --meteor-500: #4be3c1;
+  --meteor-700: #13a586;
+  --meteor-900: #0a6b56;
+
+  --nebula-100: #ffe3f1;
+  --nebula-500: #ff6fb5;
+  --nebula-900: #8a1d52;
+
+  --star-100: #fff9db;
+  --star-500: #ffe66d;
+  --star-700: #e0b92a;
+  --star-900: #6e5500;
+
+  /* Semantic — night theme */
+  --bg: var(--space-900);
+  --surface: var(--space-800);
+  --surface-raised: var(--space-700);
+  --border: var(--space-600);
+  --text: var(--space-50);
+  --text-soft: var(--space-100);
+  --text-muted: var(--space-200);
+  --primary: var(--rocket-500);
+  --on-primary: var(--space-900);
+  --success: var(--meteor-500);
+  --success-text: var(--meteor-500);
+  --reward: var(--nebula-500);
+  --highlight: var(--star-500);
+  --alert: #ff7a85;
+  --focus-ring: var(--meteor-500);
+
+  /* Type */
+  --font-display: 'Lalezar', 'Cairo', system-ui, sans-serif;
+  --font-body: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+  --font-learn: 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+
+  /* Spacing */
+  --step-1: 4px;
+  --step-2: 8px;
+  --step-3: 12px;
+  --step-4: 16px;
+  --step-6: 24px;
+  --step-8: 32px;
+  --step-12: 48px;
+  --step-16: 64px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 26px;
+  --radius-xl: 32px;
+  --radius-round: 999px;
+
+  /* Shadows */
+  --glow-rocket: 0 0 24px rgba(255, 159, 67, 0.55);
+  --glow-meteor: 0 0 16px rgba(75, 227, 193, 0.7);
+  --lift: 0 8px 24px rgba(11, 12, 36, 0.6);
+
+  /* Layout */
+  --page-max: 1200px;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --touch: 48px;
+
+  color-scheme: dark;
+}
+
+.theme-day {
+  --bg: var(--space-50);
+  --surface: #ffffff;
+  --surface-raised: #eceafb;
+  --border: var(--space-100);
+  --text: var(--space-900);
+  --text-soft: #34386e;
+  --text-muted: #4b4f86;
+  --success: var(--meteor-700);
+  --success-text: var(--meteor-900);
+  --alert: #c9283a;
+  --focus-ring: var(--space-600);
+  --lift: 0 8px 24px rgba(52, 56, 132, 0.14);
+  color-scheme: light;
+}

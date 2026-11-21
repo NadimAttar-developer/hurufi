@@ -1,0 +1,518 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.badge {
+  background: var(--surface-raised);
+  color: var(--text-muted);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.titleLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.example {
+  background: var(--meteor-100);
+  color: var(--meteor-900);
+}
+
+.kids {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.kid {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 0 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: var(--font-body);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.kidActive {
+  background: var(--space-900);
+  color: var(--space-50);
+  border-color: var(--space-900);
+}
+
+.kidInitial {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.kidText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.3;
+  font-size: 16px;
+}
+
+.kidText small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tileLabel {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.tileValue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.tileNote {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.miniTrack {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--surface-raised);
+  overflow: hidden;
+}
+
+.miniTrack div {
+  height: 100%;
+  background: var(--meteor-700);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.chartCard {
+  flex: 999 1 560px;
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.h2 {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.toggle {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--surface-raised);
+  border: 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chart {
+  display: flex;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.yAxis {
+  position: relative;
+  width: 24px;
+  height: 220px;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.yAxis span {
+  position: absolute;
+  transform: translateY(50%);
+}
+
+.plotWrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plot {
+  position: relative;
+  height: 220px;
+  border-bottom: 2px solid var(--border);
+}
+
+.grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--surface-raised);
+}
+
+.limit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.limit span {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.barSlot {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.barBtn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0 10px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  max-width: 36px;
+  min-height: 2px;
+  border-radius: 4px 4px 0 0;
+}
+
+.future {
+  width: 36px;
+  max-width: 70%;
+  height: 24px;
+  border: 2px dashed var(--border);
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.tip {
+  position: absolute;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--space-900);
+  color: var(--space-50);
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.xAxis {
+  display: flex;
+}
+
+.xAxis span {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid var(--surface-raised);
+}
+
+.table th {
+  border-bottom: 2px solid var(--border);
+}
+
+.lettersCard {
+  flex: 1 1 340px;
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.letterRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.letter {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.mastered { background: var(--meteor-500); color: var(--space-900); }
+.review { background: var(--rocket-100); color: var(--rocket-900); border: 2px dashed var(--rocket-700); }
+.learning { background: var(--rocket-500); color: var(--space-900); }
+
+.note {
+  flex: 1 1 340px;
+  min-width: 0;
+  background: var(--space-900);
+  color: var(--space-50);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.noteEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--star-500);
+}
+
+.listCard {
+  flex: 1 1 340px;
+  min-width: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recent {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.segments {
+  display: flex;
+  gap: 8px;
+}
+
+.segment {
+  flex: 1;
+  min-height: 48px;
+  border-radius: 14px;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.segmentOn {
+  background: var(--space-900);
+  color: var(--space-50);
+  font-weight: 800;
+}
+
+.switchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 14px;
+  background: var(--bg);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switchRow input {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--meteor-700);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding-top: 20px;
+    gap: 18px;
+  }
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .tile {
+    padding: 14px;
+  }
+  .tileValue {
+    font-size: 26px;
+  }
+  .tileNote {
+    display: none;
+  }
+  .chartCard,
+  .lettersCard,
+  .listCard,
+  .note {
+    padding: 18px 14px;
+  }
+  .barBtn {
+    padding: 0 6px;
+  }
+  .yAxis,
+  .plot {
+    height: 180px;
+  }
+  .xAxis span {
+    font-size: 12px;
+  }
+}

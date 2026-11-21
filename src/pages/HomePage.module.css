@@ -1,0 +1,373 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--step-12);
+  padding-top: 72px;
+  padding-bottom: 88px;
+}
+
+.heroText {
+  flex: 1 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.ageChip {
+  padding: 8px 16px;
+  border-radius: var(--radius-round);
+  border: 2px solid var(--meteor-500);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.heroTitle {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.15;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-soft);
+  max-width: 34rem;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.facts {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.heroArt {
+  flex: 1 1 360px;
+  min-width: 0;
+  max-width: 460px;
+  aspect-ratio: 1;
+  position: relative;
+  margin-inline: auto;
+}
+
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 118%;
+  height: 30%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  border: 8px solid var(--star-500);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.bigPlanet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 62%;
+  height: 62%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--rocket-500);
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(90px, 12vw, 160px);
+  line-height: 1;
+  box-shadow: 0 0 64px rgba(255, 159, 67, 0.45);
+  animation: float 6s ease-in-out infinite;
+}
+
+.moon {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--space-900);
+}
+
+.moonA {
+  top: 4%;
+  right: 6%;
+  width: 22%;
+  height: 22%;
+  background: var(--meteor-500);
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.moonB {
+  bottom: 6%;
+  left: 4%;
+  width: 18%;
+  height: 18%;
+  background: var(--nebula-500);
+  font-size: clamp(26px, 3.4vw, 42px);
+}
+
+.starA {
+  position: absolute;
+  top: 12%;
+  left: 14%;
+  color: var(--star-500);
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, -53%); }
+}
+
+.band {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sectionHead {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 40rem;
+}
+
+.h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.25;
+}
+
+.h3 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.sub {
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--text-soft);
+}
+
+.cards3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.stepCard {
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 18px;
+}
+
+.stepHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stepNum {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+.mapHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.mapStrip {
+  padding: 40px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px 18px;
+}
+
+.mapItem {
+  width: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mapCaption {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.cards4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.activityCard {
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 17px;
+}
+
+.activityIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parents {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.parentsInner {
+  align-items: flex-start;
+}
+
+.eyebrow {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--meteor-900);
+}
+
+.checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.checks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.finalCta {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-raised);
+  border-radius: var(--radius-xl);
+  padding: 56px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.finalBlob {
+  position: absolute;
+  left: -60px;
+  bottom: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: var(--rocket-500);
+  opacity: 0.9;
+}
+
+.finalText {
+  position: relative;
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    gap: 24px;
+    flex-direction: column-reverse;
+  }
+  .heroArt {
+    width: 72%;
+    flex: none;
+  }
+  .ctas {
+    width: 100%;
+  }
+  .ctas > * {
+    flex: 1 1 100%;
+  }
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 24px;
+  }
+  .mapStrip {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 24px 16px;
+  }
+  .mapItem {
+    flex-shrink: 0;
+  }
+  .cards4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .activityCard {
+    padding: 16px;
+    font-size: 15px;
+  }
+  .finalCta {
+    padding: 32px 20px;
+  }
+  .finalBlob {
+    width: 160px;
+    height: 160px;
+  }
+}

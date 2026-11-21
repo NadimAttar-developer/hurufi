@@ -1,0 +1,350 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.titles {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.planetName {
+  font-size: 26px;
+}
+
+.stepLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.step {
+  flex: 1;
+}
+
+.stepLink {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.stepBar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--space-600);
+}
+
+.stepText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.step_done .stepBar { background: var(--meteor-500); }
+.step_done .stepText { color: var(--meteor-500); }
+.step_current .stepBar { background: var(--rocket-500); }
+.step_current .stepText { color: var(--text); font-weight: 800; }
+
+.main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: stretch;
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+
+.stage {
+  flex: 999 1 560px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.aside {
+  flex: 1 1 300px;
+  min-width: 0;
+  background: var(--surface-raised);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.taskRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.taskTitle {
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.3;
+  text-align: center;
+}
+
+.soundBig {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--rocket-500);
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 10px rgba(255, 159, 67, 0.25), var(--glow-rocket);
+}
+
+.soundSmall {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--meteor-500);
+  color: var(--meteor-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.message {
+  min-height: 30px;
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Letter card (aside) */
+.letterCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.letterBadge {
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--star-500);
+  color: var(--space-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 68px;
+  line-height: 1;
+}
+
+.forms {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.form {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 10px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.form span:first-child {
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+.form span:last-child {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tipBox {
+  margin-top: auto;
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 16px;
+  color: var(--text-soft);
+}
+
+.tipBox strong {
+  color: var(--star-500);
+  font-size: 15px;
+}
+
+/* Feedback bar */
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+}
+
+.feedback {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.fb_idle {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.fb_hint {
+  background: var(--surface-raised);
+  border-top: 3px solid var(--alert);
+}
+
+.fb_success {
+  background: var(--meteor-500);
+  color: var(--space-900);
+}
+
+.feedbackInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.feedbackMsg {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.feedbackIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feedbackText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.feedbackTitle {
+  font-size: 26px;
+}
+
+.feedbackActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .planetName {
+    font-size: 22px;
+  }
+  .stepText {
+    font-size: 12px;
+  }
+  .main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 14px;
+  }
+  .stage {
+    padding: 18px 14px;
+    gap: 16px;
+    border-radius: 24px;
+  }
+  .aside {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+  .hideOnPhone {
+    display: none;
+  }
+  .letterBadge {
+    width: 56px;
+    height: 56px;
+    font-size: 34px;
+  }
+  .soundBig {
+    width: 68px;
+    height: 68px;
+  }
+  .message {
+    font-size: 16px;
+  }
+  .feedbackInner {
+    padding-top: 14px;
+    padding-bottom: 16px;
+  }
+  .feedbackTitle {
+    font-size: 22px;
+  }
+  .feedbackActions {
+    width: 100%;
+  }
+  .feedbackActions > * {
+    flex: 1 1 0;
+  }
+}
